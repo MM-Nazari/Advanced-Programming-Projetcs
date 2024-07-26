@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+      <AnchorPane prefHeight="100.0" prefWidth="400.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Polygon fill="DODGERBLUE" points="-50.0, 40.0, 50.0, 40.0, -50.0, 140.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Polygon fill="DODGERBLUE" points="0.0, 40.0, 115.0, 40.0, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Polygon fill="DODGERBLUE" points="50.0, 109.0, 50.0, 9.0, -50.0, 9.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </HBox>
+            <HBox layoutX="315.0" prefHeight="100.0" prefWidth="324.0">
+               <children>
+                  <Polygon points="-50.0, 40.0, 50.0, 40.0, -50.0, 140.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="0.7142857142857143" endY="0.12380952380952381" startY="0.1">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.9473684430122375" green="0.5" blue="0.5" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.20999999344348907" green="0.006603248883038759" blue="0.002099999925121665" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Polygon>
+                  <Polygon fill="WHITE" points="0.0, 48.0, 115.0, 48.0, 115.0, -52.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Polygon points="50.0, 109.0, 50.0, 9.0, -50.0, 9.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+               <effect>
+                  <InnerShadow choke="0.34" height="219.66" radius="114.52" width="240.42">
+                     <color>
+                        <Color red="0.6184210777282715" green="0.1288377195596695" blue="0.1288377195596695" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Polygon fill="#434143" points="-50.0, 40.0, 50.0, 40.0, -50.0, 140.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Polygon fill="#f9fcf6" points="0.0, 40.0, 115.0, 40.0, 0.0, -60.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Polygon points="50.0, 109.0, 50.0, 9.0, -50.0, 9.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="0.1523809523809524" endY="0.12380952380952381" startX="0.8857142857142858" startY="0.26666666666666666">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8552631735801697" green="0.4038742780685425" blue="0.4038742780685425" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Polygon>
+               </children>
+            </HBox>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="179.0" layoutX="-2.0" layoutY="98.0" stroke="BLACK" strokeType="INSIDE" width="218.0">
+               <fill>
+                  <LinearGradient startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="179.0" layoutX="412.0" layoutY="98.0" stroke="BLACK" strokeType="INSIDE" width="218.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.6578947305679321" green="0.042641326785087585" blue="0.042641326785087585" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.13756904006004333" green="0.03350389748811722" blue="0.6578947305679321" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <VBox layoutX="217.0" layoutY="96.0" prefHeight="179.0" prefWidth="193.0">
+               <children>
+                  <Button fx:id="easyButton" mnemonicParsing="false" onAction="#onClickButtonEasy" prefHeight="59.0" prefWidth="193.0" text="Easy">
+                     <effect>
+                        <Lighting diffuseConstant="1.12" light="$null" specularConstant="0.86" specularExponent="32.56" surfaceScale="10.0">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                        </Lighting>
+                     </effect>
+                     <font>
+                        <Font name="Monospaced Regular" size="21.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="normalButton" mnemonicParsing="false" onAction="#onClickButtonNormal" prefHeight="59.0" prefWidth="193.0" text="Normal">
+                     <effect>
+                        <Lighting specularConstant="0.58" specularExponent="8.37" surfaceScale="10.0">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="103.6" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <font>
+                        <Font name="Monospaced Regular" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="hardButton" mnemonicParsing="false" onAction="#onClickButtonHard" prefHeight="59.0" prefWidth="193.0" text="Hard">
+                     <effect>
+                        <Lighting diffuseConstant="0.93" specularConstant="0.65" specularExponent="6.98" surfaceScale="10.0">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <font>
+                        <Font name="Monospaced Regular" size="23.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Polygon fill="#202122" points="-50.0, 140.0, -50.0, 240.0, 50.0, 240.0" stroke="BLACK" strokeType="INSIDE" />
+            <Polygon fill="#f9fbfc" points="0.0, 40.0, 115.0, 40.0, 0.0, 140.0" stroke="BLACK" strokeType="INSIDE" />
+            <Polygon points="237.0, 109.0, 137.0, 209.0, 237.0, 209.0" stroke="BLACK" strokeType="INSIDE">
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.10476190476190472" startX="0.41428571428571426">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5458089709281921" green="0.5507472157478333" blue="0.8421052694320679" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Polygon>
+            <HBox prefHeight="100.0" prefWidth="261.0">
+               <children>
+                  <Polygon points="-39.0, 40.0, 61.0, 140.0, -39.0, 140.0" stroke="BLACK" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.10476190476190472">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.4649122953414917" green="0.49707603454589844" blue="0.9473684430122375" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="9.74658876657486E-4" green="0.004467186518013477" blue="0.21052631735801697" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Polygon>
+                  <Polygon fill="#4327b5" points="0.0, 240.0, 123.0, 240.0, 123.0, 340.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Polygon fill="#4335bc" points="-50.0, 117.0, 42.0, 117.0, 42.0, 17.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+  </children>
+</VBox>

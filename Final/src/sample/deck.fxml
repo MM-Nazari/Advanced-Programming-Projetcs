@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="611.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar prefHeight="22.0" prefWidth="637.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: gray;" VBox.vgrow="ALWAYS">
+      <children>
+            <Label layoutX="212.0" layoutY="24.0" prefHeight="46.0" prefWidth="347.0" text="Choose Your Battle Deck">
+               <font>
+                  <Font name="Calibri Italic" size="34.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.6938347220420837" green="0.21060000360012054" blue="0.8100000023841858" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.8100000023841858" green="0.21060000360012054" blue="0.5106967091560364" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <VBox layoutX="13.0" layoutY="100.0" prefHeight="476.0" prefWidth="80.0">
+               <children>
+                  <RadioButton fx:id="wizardRadioButton" mnemonicParsing="false" onAction="#onClickRadioButtonWizard" prefHeight="72.0" prefWidth="80.0" style="-fx-background-color: icy;" text="wizard" />
+                  <RadioButton fx:id="dragonRadioButton" mnemonicParsing="false" onAction="#onClickRadioButtonDragon" prefHeight="77.0" prefWidth="80.0" text="dragon" />
+                  <RadioButton fx:id="cannonRadioButton" mnemonicParsing="false" onAction="#onClickRadioButtonCannon" prefHeight="68.0" prefWidth="80.0" text="cannon" />
+                  <RadioButton fx:id="arrowsRadioButton" mnemonicParsing="false" onAction="#onClickRadioButtonArrows" prefHeight="83.0" prefWidth="80.0" text="arrows" />
+                  <RadioButton fx:id="fireballRadioButton" mnemonicParsing="false" onAction="#onClickRadioButtonFireball" prefHeight="88.0" prefWidth="80.0" text="fireball" />
+                  <RadioButton fx:id="archerRadioButton" mnemonicParsing="false" onAction="#onClickRadioButtonArcher" prefHeight="88.0" prefWidth="80.0" text="archer" />
+               </children>
+            </VBox>
+            <VBox layoutX="105.0" layoutY="98.0" prefHeight="476.0" prefWidth="232.0">
+               <children>
+                  <ImageView fx:id="wizardImage" fitHeight="78.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/final%20project/clash%20royale%20images/wizard.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="dragonImage" fitHeight="79.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/final%20project/clash%20royale%20images/baby%20dragon.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="cannonImage" fitHeight="79.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/final%20project/clash%20royale%20images/cannon.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="arrowsImage" fitHeight="79.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/final%20project/clash%20royale%20images/arrows.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="79.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/final%20project/clash%20royale%20images/fireball.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="archerImage" fitHeight="79.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/final%20project/clash%20royale%20images/archer.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox layoutX="435.0" layoutY="100.0" prefHeight="476.0" prefWidth="80.0" style="-fx-background-color: icy;">
+               <children>
+                  <RadioButton fx:id="barbarRadioButton" mnemonicParsing="false" onAction="#onClickRadioButtonBarbar" prefHeight="72.0" prefWidth="80.0" style="-fx-background-color: icy;" text="barbar" />
+                  <RadioButton fx:id="rageRadioButton" mnemonicParsing="false" onAction="#onClickRadioButtonRage" prefHeight="77.0" prefWidth="80.0" text="rage" />
+                  <RadioButton fx:id="pekkaRadioButton" mnemonicParsing="false" onAction="#onClickRadioButtonPekka" prefHeight="68.0" prefWidth="80.0" text="pekka" />
+                  <RadioButton fx:id="giantRadioButton" mnemonicParsing="false" onAction="#onClickRadioButtonGiant" prefHeight="83.0" prefWidth="80.0" text="giant" />
+                  <RadioButton fx:id="infernoRadioButton" mnemonicParsing="false" onAction="#onClickRadioButtonInferno" prefHeight="88.0" prefWidth="80.0" text="inferno" />
+                  <RadioButton fx:id="valkyrieRadioButton" mnemonicParsing="false" onAction="#onClickRadioButtonValkyrie" prefHeight="88.0" prefWidth="80.0" text="valkyrie" />
+               </children>
+            </VBox>
+            <VBox layoutX="515.0" layoutY="98.0" prefHeight="476.0" prefWidth="232.0">
+               <children>
+                  <ImageView fx:id="barbarImage" fitHeight="79.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/final%20project/clash%20royale%20images/barbar.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="rageImage" fitHeight="79.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/final%20project/clash%20royale%20images/rage.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="pekkaImage" fitHeight="79.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/final%20project/clash%20royale%20images/mini%20pekka.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="giantImage" fitHeight="79.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/final%20project/clash%20royale%20images/giant.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="infernoImage" fitHeight="79.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/final%20project/clash%20royale%20images/inferno.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="valkyrieImage" fitHeight="79.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Desktop/final%20project/clash%20royale%20images/valkyrie.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+      </children>
+    </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+  </children>
+</VBox>
