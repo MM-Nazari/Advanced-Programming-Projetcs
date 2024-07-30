@@ -24,5 +24,4 @@ Step-by-step instructions on how to get the development environment running:
 2. Launch IntelliJ.
 3. Click on File > Open.
 4. Navigate to the folder where you cloned the repository and select the project folder.
-5. Click the Run button ![Run Image](./Pycharm_Run.PNG) to start the project.
-* For Midterm Project run both Client and Server.
+5. Click the Run button ![Run Image](./Pycharm_Run.PNG) to start the project (for Midterm Project run both Client and Server).
